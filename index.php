@@ -1,6 +1,6 @@
 <?php
 
-require_once "config.php";
+require_once ('config.php');
 //$sql = new Sql();
 //$usuario = $sql->select("SELECT * FROM tb_usuarios");
 //echo json_encode($usuario);
@@ -19,6 +19,18 @@ require_once "config.php";
 //echo json_encode($busca);
 
 //Carrega um usúario usando o ligin e a senha
-        $usuario = new Usuario();
-        $usuario->login("root", "1234");
-        echo $usuario;
+      //  $usuario = new Usuario();
+      //  $usuario->login("root", "1234");
+       // echo $usuario;
+
+// insere um nova usuario no banco 
+//$aluno = new Usuario("yas", "324");
+//$aluno->setDeslogin("yas");
+//$aluno->setDessenha("456");
+
+//$aluno->inserir();
+  //echo $aluno;
+$atualiza = new Usuario();
+$atualiza->loadByid(15);
+$atualiza->update("ADEV", "13");
+echo $atualiza;
