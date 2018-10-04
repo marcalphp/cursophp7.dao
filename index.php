@@ -30,7 +30,17 @@ require_once ('config.php');
 
 //$aluno->inserir();
   //echo $aluno;
-$atualiza = new Usuario();
+
+//ALTERAR OS DADOS NO BANCO
+/*$atualiza = new Usuario();
 $atualiza->loadByid(15);
 $atualiza->update("ADEV", "13");
 echo $atualiza;
+ * 
+ */
+
+// DELETAR OU APAGAR DADOS NO BANCO
+$deletar = new Usuario();
+$deletar->loadByid(24);
+$deletar->delate();
+echo $deletar;
